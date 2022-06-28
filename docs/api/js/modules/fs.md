@@ -211,7 +211,7 @@ const entries = await readDir('users', new Uint8Array([]), { dir: BaseDirectory.
 function processEntries(entries) {
   for (const entry of entries) {
     console.log(`Entry: ${entry.path}`);
-    if (entry.children !== null) {
+    if (entry.children) {
       processEntries(entry.children)
     }
   }
